@@ -1,12 +1,22 @@
-minimize:	  /* costs of each food */
+minimize:  
+/*costs of each food from http://www.grocerypricebooks.com/GiantEagle.php*/
 
 /*using daily dietary allowances for males aged 23-50 on pg 182 */
-									  >= 2700     /*calories*/
-									  >= 56	      /*protein*/
-									  >= 800      /*calcium*/
-									  >= 10	      /*iron*/
-									  >= 5000     /*vitamin A*/
-									  >= 1.2      /*Thiamin*/
-									  >= 1.5      /*Riboflavin*/
-									  >= 1.6      /*Niacin*/
-									  >= 45	      /*vitamin C*/
+120*cheddar  + 50*cottage_cheese   + 160*milk  + 125*yogurt  + 205*chicken  + 80*egg   + 200*fish  + 290*ham  + 245*hamburger  + 170*liver   + 90*peanut_butter   + 160*pork  + 260*steak  + 195*tuna  + 90*apple   + 25*brocolli   + 20*carrot   + 75*orange   + 80*orange_juice   + 95*potatoes   + 20*spinach   + 35*tomato   + 55*bread   + 95*corn_flakes   + 65*oatmeal   + 155*pasta  + 110*rice  + 100*butter + 385*sugar		  >= 2700     /*calories*/
+7.5*cheddar  + 9.5*cottage_cheese  + 8.5*milk  + 8.5*yogurt  + 32.5*chicken + 6.5*egg  + 30.0*fish + 21.0*ham + 20.5*hamburger + 20*liver    + 4*peanut_butter    + 8*pork    + 28.5*steak + 29*tuna   + 0.3*apple  + 3*brocolli    + 0.6*carrot  + 1.5*orange  + 1*orange_juice    + 2.5*potatoes  + 3.0*spinach  + 1.5*tomato  + 2*bread    + 2*corn_flakes    + 2*oatmeal    + 5*pasta    + 2*rice    + 0*butter   + 0*sugar			  >= 56	      /*protein*/
+225*cheddar  + 50*cottage_cheese   + 285*milk  + 295*yogurt  + 12*chicken   + 27*egg   + 23*fish   + 9*ham    + 9*hamburger    + 8*liver     + 10*peanut_butter   + 70*pork   + 12*steak   + 8*tuna    + 11*apple   + 88*brocolli   + 19*carrot   + 62*orange   + 20*orange_juice   + 9*potatoes    + 84*spinach   + 20*tomato   + 17*bread   + 4*corn_flakes    + 11*oatmeal   + 11*pasta   + 10*rice   + 3*butter   + 0*sugar			  >= 800      /*calcium*/
+0.3*cheddar  + 0.2*cottage_cheese  + 0*milk    + 0*yogurt    + 1.7*chicken  + 1.2*egg  + 1.4*fish  + 2.6*ham  + 2.7*hamburger  + 6.6*liver   + 0.3*peanut_butter  + 2.3*pork  + 3.5*steak  + 1.9*tuna  + 0.5*apple  + 0.8*brocolli  + 0.4*carrot  + 0.6*orange  + 0.4*orange_juice  + 0.7*potatoes  + 2.0*spinach  + 0.8*tomato  + 0.5*bread  + 0.4*corn_flakes  + 0.7*oatmeal  + 0.6*pasta  + 0.9*rice  + 0*butter   + 0.1*sugar		  >= 10	      /*iron*/
+390*cheddar  + 5*cottage_cheese    + 370*milk  + 170*yogurt  + 90*chicken   + 590*egg  + 0*fish    + 0*ham    + 30*hamburger   + 40000*liver + 0*peanut_butter    + 170*pork  + 30*steak   + 80*tuna   + 140*apple  + 2500*brocolli + 5500*carrot + 300*orange  + 370*orange_juice  + 0*potatoes    + 7290*spinach + 1350*tomato + 0*bread    + 0*corn_flakes    + 0*oatmeal    + 0*pasta    + 0*rice    + 460*butter + 0*sugar			  >= 5000     /*vitamin A*/
+0.01*cheddar + 0.02*cottage_cheese + 0.07*milk + 0.10*yogurt + 0.05*chicken + 0.06*egg + 0.07*fish + 0.47*ham + 0.08*hamburger + 0.2*liver   + 0.02*peanut_butter + 0.1*pork  + 0.08*steak + 0.05*tuna + 0.05*apple + 0.09*brocolli + 0.03*carrot + 0.15*orange + 0.17*orange_juice + 0.1*potatoes  + 0.06*spinach + 0.09*tomato + 0.04*bread + 0.11*corn_flakes + 0.1*oatmeal  + 0.01*pasta + 0.11*rice + 0*butter   + 0*sugar		  	  >= 1.2      /*Thiamin*/
+0.14*cheddar + 0.15*cottage_cheese + 0.41*milk + 0.44*yogurt + 0.22*chicken + 0.15*egg + 0.08*fish + 0.18*ham + 0.18*hamburger + 3.14*liver  + 0.02*peanut_butter + 0.04*pork + 0.22*steak + 0.12*tuna + 0.03*apple + 0.2*brocolli  + 0.03*carrot + 0.06*orange + 0.06*orange_juice + 0.04*potatoes + 0.13*spinach + 0.06*tomato + 0.02*bread + 0.02*corn_flakes + 0.02*oatmeal + 0.01*pasta + 0*rice    + 0*butter   + 0*sugar			  >= 1.5      /*Riboflavin*/
+0*cheddar    + 0*cottage_cheese    + 0.2*milk  + 0.2*yogurt  + 14.7*chicken + 0.1*egg  + 2.5*fish  + 3.6*ham  + 4.6*hamburger  + 12.4*liver  + 2.4*peanut_butter  + 0.8*pork  + 5.6*steak  + 11.9*tuna + 0.2*apple  + 0.8*brocolli  + 0.3*carrot  + 0.6*orange  + 0.7*orange_juice  + 1.7*potatoes  + 0.5*spinach  + 1.1*tomato  + 0.3*bread  + 0.5*corn_flakes  + 0.1*oatmeal  + 0.4*pasta  + 1*rice    + 0*butter   + 0*sugar			  >= 1.6      /*Niacin*/
+0*cheddar    + 0*cottage_cheese    + 2*milk    + 2*yogurt    + 0*chicken    + 0*egg    + 2*fish    + 0*ham    + 0*hamburger    + 20*liver    + 0*peanut_butter    + 3*pork    + 0*steak    + 0*tuna    + 6*apple    + 90*brocolli   + 4*carrot    + 75*orange   + 0.7*orange_juice  + 20*potatoes   + 25*spinach   + 35*tomato   + 0*bread    + 0*corn_flakes    + 0*oatmeal    + 0*pasta    + 0*rice    + 0*butter   + 0*sugar			  >= 45	      /*vitamin C*/
+
+/*the following food group recommendations are from http://www.choosemyplate.gov/supertracker-tools/daily-food-plans.html */
+/*taking some liberties in serving sizes given on pg 185 of Chvatal*/
+
+bread + corn_flakes + oatmeal + pasta + potatoes + rice					<= 10	      /*grains, ounces*/
+brocolli + carrot + spinach + tomato							<= 3.5	      /*vegetables, cups*/
+apple + orange + orange_juice							        <= 2.5	      /*fruits, cups*/
+cheddar + cottage_cheese + milk + yogurt						<= 3	      /*dairy, cups*/
+chicken + egg + fish + ham + hamburger + liver + peanut_butter + pork + steak + tuna	<= 7	      /*proteins, ounces*/

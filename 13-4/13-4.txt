@@ -1,0 +1,108 @@
+From Chvatal pg 212, problem 13.4
+===================================================================================
+
+
+Let a1,a2,....,am and c1,c2,.....,cm be fixed positive integers.
+
+For each nonnegative integer k, let z(k) denote the maximum of:
+
+	    Sum[from i=1 to m] ci * xi
+
+      subject to:
+	    
+	    Sum[from i=1 to m] ai * xi <= k
+	      
+				    xi = nonnegative integer	  (i = 1,2,.....,m)
+
+
+
+Assuming k >= min aj, prove that 
+
+	z(k) = max(ci + z(k - ai))
+
+	  with maximum taken over all the subscripts i such that ai <= k
+
+
+  
+************************************************************************************
+
+Proof by Strong Induction:
+
+
+Basis Step: Show z(0) is true
+
+	z(0) = 0, as the sum of the value of zero items is zero
+
+	z(k) = max(ci + z(k - ai))
+
+	      s.t. ai <= k
+	
+	since k = 0, i must equal zero, and no items can be added to the knapsack
+
+	so,
+
+	    z(0) = (0 + z(0-0) )
+		 = (0 + 0)
+		 = 0		    QED, basis step
+
+
+Strong Inductive Step:
+
+	Inductive Hypothesis: {
+
+	Assume z(n) is true for all n, 0 <= n <= k, ie that
+
+	    z(n) = nax(ci + z(n - ai))
+      
+		s.t. ai <= k
+
+	}
+
+
+	Need to Show: z(k+1) is true, ie that
+    
+	  z(k+1) = max(ci + z(k+1 - ai))
+		
+		s.t. ai <= k+1
+
+
+    Two cases:
+
+	1)  Weight k+1 does not allow an additional item to "fit into the bag"
+	  
+	      Therefore, z(k+1) = z(k). 
+	      
+	      z(k) is true because the inductive hypothesis says that z(n) is true
+
+	      for all n, 0 <= n <= k.
+	      
+	      Because z(k) is true, and z(k+1) = z(k), then z(k+1) is true.
+						    
+						      QED, case 1
+
+
+	
+	2)  Weight k+1 does allow an additional item, xi+1, to fit into "the bag"
+
+	      Therefore, ai+1 <= k+1, and ci+1 "fits" into z(k+1), ie
+
+		  z(k+1) = (ci+1 + z(k+1 - ai+1)).
+
+	      Because 0 <= (k+1 - ai+1) <= k, we know z(k+1 = ai+1) is true by the inductive hypothesis.
+
+	      Therefore, z(k+1) = (ci+1 + z(k+1 - ai+1)) is true.
+
+						      QED, case 2
+
+
+We have shown by cases that the Inductive Hypothesis is true.
+
+****************************************************************************
+
+
+Therefore, assertion is true by Strong Induction.
+
+						      QED
+
+
+

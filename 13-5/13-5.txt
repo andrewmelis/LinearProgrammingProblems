@@ -1,0 +1,9 @@
+//pseudo code from Dasgupta et al., Algorithms, 2006
+
+initialize table z
+z(k) = 0
+
+for k = 0 to b
+  z(k) = max (c[i] + z(k - a[i]) )
+
+return Z

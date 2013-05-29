@@ -73,12 +73,17 @@ apple + orange										>= 2.5;	      /*fruits, cups*/
 int cheddar	;
 int milk	;
 int yogurt	;
+int chicken	;
 sec chicken	;
 sec fish	;
+int fish	;
+int ham		;
 sec ham		;
 sec hamburger	;
+int hamburger	;
 int peanut_butter;
 sec steak	;
+int steak	;
 int apple	;
 int broccoli	;
 int carrot	;

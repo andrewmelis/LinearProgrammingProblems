@@ -1,0 +1,100 @@
+Chvatal problem 15.5, pg 238
+================================================================================================
+
+A row r of the payoff matrix is said to dominate a row s if a[rj] >= a[sj] for all j = 1,2,...,n.
+Similarly, a column r of the payoff matrix is said to dominate a column s if a[ir] >= a[is] 
+for all i = 1,2,....,m. Prove:
+
+  (i)  If a row r is dominated by another row, then the row player has at least one optimal
+       strategy x* in which x[r]* = 0. In particular, if row r is deleted from the payoff matrix,
+       then the value of the game does not change.
+
+  (ii) If a column r is dominated by another column, then the column player has at least one optimal
+       strategy y* in which y[s]* = 0. In particular, if column s is deleted from the payoff matrix,
+       then the value of the game does not change.
+       
+************
+
+
+Proof of part (i):
+
+Assume that row r is dominated by row s. Thus, the row player can achieve, with pure strategy s,
+a payoff >= the payoff possible by pure strategy r regardless of the column player's choice.
+
+As stated in the given, if a row r is dominated by another row, then the row player has at least one
+optimal strategy x* in which x[r]* = 0. 
+
+
+Case 1:
+  
+  In the case where row r is weakly dominated, ie, a[rj] <= a[sj] for all j = 1,2,...,n,
+  Some optimal mixed strategies may have used the dominated row in some percentage
+  of cases. Removal of row r would eliminate those mixed strategies utilizing row r
+  from the set of optimal strategies for the row player.
+
+  By definition, all optimal mixed strategies produce the same value v for the row player.
+  If a mixed strategy does not produce that value v (ie, the value of the game), then that 
+  strategy is not optimal.
+
+  So, these possible optimal strategies using row r are eliminated from the set of 
+  available optimal strategies. The remaining optimal strategy/strategies all should have
+  the same value v for the row player. Thus, the value v of the game does not change.
+
+  However, suppose, for contradiction, that the value of the game DOES change when 
+  row r is deleted from the payoff matrix. 
+  
+  If the value v increases increases after row r is eliminated, then this contradicts
+  the assumption the strategies removed were optimal strategies.
+
+  If the value v decreases after row r is eliminated, then this means contradicts the
+  assumption that at least one strategy x* exists in which x[r]* = 0 and that some 
+  strategy s produced a payoff larger than the payoff produced by row r for all j.
+
+  This is a contradiction because any value of x[r]* greater than zero would alter
+  the calculation of x* = x[1]* + x[2]* + ... x[m]*.
+
+
+  Case 1 proved, by contradiction.
+
+
+Case 2:
+  
+  In the case where row r is strictly dominated, ie, a[rj] < a[sj] for all j = 1,2,...,n,
+  no mixed optimal strategies "play" row r, ie, every optimal strategy x* has x[r]*=0.
+
+  If removal of row r eliminated some mixed strategies from the set of optimal strategies,
+  this would contradict the assumption that row r is strictly dominated by some other row s,
+  as a strictly dominated row is used in exactly zero optimal strategies.
+
+  Suppose, for contradiction, that the value of the game DOES change when row r is deleted
+  from the payoff matrix.
+
+  If the value v increases increases after row r is eliminated, then this contradicts
+  the assumption that the previous value / optimal strategies were determined properly.
+
+  If the value v decreases after row r is eliminated, then this means contradicts the
+  assumption that at least one strategy x* exists in which x[r]* = 0 and that some 
+  strategy s produced a payoff larger than the payoff produced by row r for all j.
+  
+  This is a contradiction because any value of x[r]* greater than zero would alter
+  the calculation of x* = x[1]* + x[2]* + ... x[m]*.
+
+  Case 2 proved, by contradiction.
+  
+Proof of part (i), by cases, complete.
+
+
+****
+
+Proof of part (ii) is as in part (i), above, but replace all occurrences of "row" with "column";
+"x*" with "y*"; "r" with "s"; and "s" with "t"
+
+================================================================================================
+
+consulted Ferguson, Game Theory: Part II. Two-Person Zero Sum Games
+available at http://www.math.ucla.edu/~tom/Game_Theory/mat.pdf
+  
+
+
+
+

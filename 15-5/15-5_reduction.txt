@@ -1,0 +1,59 @@
+
+Original:
+
+     A  B  C   D   E
+a [ -2  3  0  -6  -3 ]
+b [  0 -4  9   2   1 ]
+c [  6 -2  7   4   5 ]
+d [  7 -3  8   3   2 ]
+
+
+first, column D dominates column C
+  bc -6 < 0, 2 < 9, 4 < 5, and 3 < 8
+
+     A  B  C   D   E		         A  B   D   E
+a [ -2  3  X  -6  -3 ]	    =>	    a [ -2  3  -6  -3 ]	
+b [  0 -4  X   2   1 ]	    => 	    b [  0 -4   2   1 ]
+c [  6 -2  X   4   5 ]	    => 	    c [  6 -2   4   5 ]
+d [  7 -3  X   3   2 ]	    => 	    d [  7 -3   3   2 ]
+
+
+next, row c dominates row b
+  bc 6 > 0, -2 > -4, 4 > 2, and 5 > 1
+
+     A  B   D   E		         A  B   D   E
+a [ -2  3  -6  -3 ]	     =>	    a [ -2  3  -6  -3 ]	
+b [  X  X   X   X ]          =>                        
+c [  6 -2   4   5 ]          =>     c [  6 -2   4   5 ]
+d [  7 -3   3   2 ]          =>     d [  7 -3   3   2 ]
+
+
+then, column E dominates column A
+  bc -6 < -2, 5 < 6, and 2 < 7
+
+     A  B   D   E		         B   D   E
+a [  X  3  -6  -3 ]	     =>	    a [  3  -6  -3 ]
+c [  X -2   4   5 ]          =>     c [ -2   4   5 ]
+d [  X -3   3   2 ]          =>     d [ -3   3   2 ]
+
+continuing, row c dominates row d
+  bc -2 > -3, 4 > 3, and 5 > 2
+
+     B   D   E			      B   D   E
+a [  3  -6  -3 ]	  =>     a [  3  -6  -3 ]
+c [ -2   4   5 ]          =>     c [ -2   4   5 ]
+d [  X   X   X ]          =>     
+
+finally, column D dominates column E
+  bc -6 < -3, and 4 < 5
+     
+     B   D   E			      B   D 
+a [  3  -6   X ]	  =>     a [  3  -6 ]
+c [ -2   4   X ]          =>     c [ -2   4 ]
+
+
+Thus, the final 2x2 payoff matrix is:
+
+     B   D 
+a [  3  -6 ]
+c [ -2   4 ]

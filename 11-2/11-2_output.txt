@@ -1,11 +1,11 @@
 
-Value of objective function: 16.48536585
+Value of objective function: 16.90000000
 
 Actual values of the variables:
 cheddar                         0
 milk                            2
 yogurt                          0
-chicken                   3.58537
+chicken                         4
 fish                            0
 ham                             2
 hamburger                       0
@@ -24,8 +24,3 @@ pasta                           2
 rice                            2
 butter                          0
 sugar                           0
-
-
-
-
-Note: $16/day comes out to $112/week to eat a healthy diet
